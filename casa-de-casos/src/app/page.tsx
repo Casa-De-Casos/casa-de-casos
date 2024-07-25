@@ -18,11 +18,9 @@ export default function Home() {
                 Phone Case!
               </h1>
               <p className="mt-8 tex-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                {" "}
                 Capture your favorite memories with your own phone case! Casa de
                 Casos allows you to protect more than just your cellular device.
               </p>
-
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <div className="space-y-2">
                   <li className="flex gap-1.5 items-center text-left">
@@ -31,7 +29,7 @@ export default function Home() {
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                    Long lasting prints
+                    Long lasting print
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
                     <Check className="h-5 w-5 shrink-0 text-green-600" />
@@ -39,6 +37,35 @@ export default function Home() {
                   </li>
                 </div>
               </ul>
+              <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+                <div className="flex -space-x-4">
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+                    src="/users/user-1.png"
+                    alt="user image"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+                    src="/users/user-2.png"
+                    alt="user image 2"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+                    src="/users/user-3.png"
+                    alt="user image 3"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+                    src="/users/user-4.jpg"
+                    alt="user image 4"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+                    src="/users/user-5.jpg"
+                    alt="user image 5"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </MaxWidthWrapper>
