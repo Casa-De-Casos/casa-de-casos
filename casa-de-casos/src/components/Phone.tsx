@@ -30,7 +30,11 @@ export const Phone = ({
       />
 
       <div className="absolute -z-10 inset-0">
-        <img className="object-cover" src={imgSrc} alt='Overlaying Phone Image' />
+        <img
+          className="object-cover"
+          src={imgSrc}
+          alt="Overlaying Phone Image"
+        />
       </div>
     </div>
   );
