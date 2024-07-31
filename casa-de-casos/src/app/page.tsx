@@ -221,7 +221,8 @@ export default function Home() {
                   className="rounded-md object-cover bg-white shadow-2xl ring-1 ring-gray-900/10 h-full w-full"
                 />
               </div>
-              <Phone className="w-60" imgSrc="dogcase.png" />
+              {/* <Phone className="w-60" imgSrc="dogcase.png" /> */}
+              <img src="dogcase.png" />
             </div>
           </div>
         </MaxWidthWrapper>
