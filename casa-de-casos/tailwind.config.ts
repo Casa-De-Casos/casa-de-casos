@@ -67,10 +67,14 @@ const config = {
             opacity: "1",
           },
         },
-      },
-      marquee: {
-        "100%": {
-          transform: "translateY(-50%)",
+        marquee: {
+          "100%": {
+            transform: "translateY(-50%)",
+          },
+        },
+        flashing: {
+          "0%, 100%": { opacity: "0.2" },
+          "20%": { opacity: "1" },
         },
       },
       animation: {
