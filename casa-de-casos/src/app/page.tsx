@@ -1,10 +1,12 @@
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Star } from "lucide-react";
 import { Phone } from "@/components/Phone";
 import { Icons } from "@/components/Icons";
 import { Reviews } from "@/components/Reviews";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -225,6 +227,34 @@ export default function Home() {
               <img src="dogcase.png" />
             </div>
           </div>
+
+
+          <ul className="mx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+              High-quality silicone material
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+              2 year print warranty
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+              Compatible with wireless charging
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+              Waterproof
+            </li>
+
+
+            <div className="flex justify-center">
+              <Link className={buttonVariants({
+                size: 'lg',
+                className:'mx-auto mt-8'
+              })} href='/configure/upload'>Create your case now! <ArrowRight className="h-4 w-4 ml-1.5" /></Link>
+            </div>
+          </ul>
         </MaxWidthWrapper>
       </section>
     </div>
