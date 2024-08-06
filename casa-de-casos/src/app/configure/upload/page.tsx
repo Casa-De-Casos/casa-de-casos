@@ -44,7 +44,7 @@ const Page =() => {
 
         setIsDragOver(false) //image alr there
     }
-
+    // const isUploading = false
     const [isPending, startTransition] = useTransition()
 
     return (
