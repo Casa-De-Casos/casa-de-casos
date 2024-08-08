@@ -42,9 +42,9 @@ export const ourFileRouter = {
             croppedImageUrl: file.url,
           },
         });
+        return { configIdId: updatedConfiguration.id };
       }
 
-      return { configId };
       // This code RUNS ON YOUR SERVER after upload
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
     }),
