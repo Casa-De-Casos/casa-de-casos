@@ -2,6 +2,8 @@ import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { z } from "zod";
 import sharp from "sharp";
 import { db } from "@/db";
+
+
 const f = createUploadthing();
 
 // FileRouter for your app, can contain multiple FileRoutes
@@ -31,7 +33,7 @@ export const ourFileRouter = {
             height: height || 500,
             width: width || 500,
           },
-        });
+        }); 
         return { configId: configuration.id };
       } else {
         const updatedConfiguration = await db.configuration.update({
