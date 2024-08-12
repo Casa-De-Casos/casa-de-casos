@@ -47,7 +47,7 @@ export const MODELS = {
 } as const
 
 export const MATERIALS = {
-    name: 'materials',
+    name: 'material',
     options: [
         {
             label: 'Silicone',
@@ -61,7 +61,7 @@ export const MATERIALS = {
             description: 'Scratch-resistant coating',
             price: PRODUCT_PRICES.material.polycarbonate,
         }
-    ]
+    ],
 } as const
 
 
