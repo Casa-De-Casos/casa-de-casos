@@ -1,7 +1,10 @@
 'use server'
 
+import { BASE_PRICE, PRODUCT_PRICES } from "@/config/products"
 import { db } from "@/db"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { getRedirectStatusCodeFromError } from "next/dist/client/components/redirect"
+
 
 export const createCheckoutSession = async ({configId}: {configId: string})  => {
 
@@ -13,5 +16,19 @@ export const createCheckoutSession = async ({configId}: {configId: string})  => 
         throw new Error('No such configurations found')
     }
 
-    const {} = getKindeServerSession()
+    const { getUser } = getKindeServerSession()
+    const user = await getUser()
+
+    if (!user) {
+        throw new Error('You need to be logged in.')
+    }
+
+    const { finish, material} = configuration
+
+    let price = BASE_PRICE
+    if(finish === 'textured') price += PRODUCT_PRICES.finish.textured
+    if(material === 'polycarbonate') price += PRODUCT_PRICES.material.polycarbonate
+
+    
+
 }
